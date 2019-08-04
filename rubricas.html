@@ -10,8 +10,26 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			#myBtn {
+				background-color: #1c97a5;
+				color:#ffffff;
+			  	display: none;
+			  	position: fixed;
+			  	bottom: 20px;
+			  	right: 30px;
+			  	z-index: 99;
+			  	border: none;
+			  	outline: none;
+			  	border-radius: 4px;
+			}
+			#myBtn:hover {
+				background-color:#8ecbd2;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
+		<button  onclick="topFunction()" id="myBtn" title="Subir">SUBIR ↑</button>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -40,6 +58,26 @@
 
 									<span class="image main"><img src="images/rubricas/cabecera_rubricas.jpg" alt="" /></span>
 
+									<div class="box">
+										<h4 id="contenidos">CONTENIDOS</h4>
+										<p style="text-align: justify">
+											<a href="#definicion_rubrica">Definición</a>
+											<br/>
+											<a href="#tipos_rubricas">Tipos de rúbricas</a>
+											<br/>
+											<a href="#elementos_rubrica">Elementos de una rúbrica</a>
+											<br/>
+											<a href="#modelos_rubricas">Modelos de rúbricas</a>
+											<br/>
+											<a href="#referencias_rubricas">Referencias</a>
+										</p>
+									</div>
+
+									<div>
+										<h2 id="definicion_rubrica">Definición</h2>
+										<a href="#contenidos">Ir arriba</a>
+									</div>
+
 									<p style="text-align: justify">
 										Las <strong>rúbricas</strong> son instrumentos de evaluación con una amplia utilidad en educación que nos permiten valorar de forma estructurada y sintetizada los aprendizajes adquiridos en la realización de determinadas tareas y productos. Son tablas de doble entrada que describen, por tanto, criterios pedagógicos y cuantifican su grado de consecución mediante niveles de ejecución y el uso de descriptores.
 										<br/>
@@ -64,14 +102,11 @@
 
 									<hr class="major" />
 
-									<h2>Tipos de rúbricas</h2>
+									<h2 id="tipos_rubricas">Tipos de rúbricas</h2>
 
 									<p style="text-align: justify">
 										De acuerdo a la clasificación sugerida por Mertler (2001) podemos encontrar dos tipos de rúbricas: <b>holísticas</b> y <b>analíticas</b>.
 									</p>
-
-									<br/>
-									<br/>
 
 									<h3>Holísticas</h3>
 									<p style="text-align: justify">
@@ -96,11 +131,12 @@
 
 									<hr class="major" />
 
-									<h2>Elementos de una rúbrica</h2>
+									<h2 id="elementos_rubrica">Elementos de una rúbrica</h2>
 									<p style="text-align: justify">Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
 
 									<hr class="major" />
 
+									<h2 id="modelos_rubricas">Modelos de rúbricas</h2>
 									<div class="row">
 										<div class="col-6 col-12-small">
 											<h3>Cuaderno de clase</h3>
@@ -144,7 +180,7 @@
 
 									<hr class="major" />
 
-									<h2>Referencias</h2>
+									<h2 id="referencias_rubricas">Referencias</h2>
 									<ul>
 										<li>Andrade, H. (2005). Teaching With Rubrics: The Good, the Bad, and the Ugly. <i>College Teaching</i>, 53(1), 27–30.</li>
 										<li>Gatica-Lara, F., & Uribarren-Berrueta, T. N. J. (2013). ¿Cómo elaborar una rúbrica? <i>Investigación en Educación Médica</i>, 2(1), 61–65.</li>
@@ -261,5 +297,24 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+			<script>
+				// When the user scrolls down 20px from the top of the document, show the button
+				window.onscroll = function() {scrollFunction()};
+				
+				function scrollFunction() {
+				  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					document.getElementById("myBtn").style.display = "block";
+				  } else {
+					document.getElementById("myBtn").style.display = "none";
+				  }
+				}
+					
+				// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+				  document.body.scrollTop = 0;
+				  document.documentElement.scrollTop = 0;
+				}
+			</script>
+					
 	</body>
 </html>

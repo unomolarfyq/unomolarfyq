@@ -11,6 +11,7 @@
 	--azul01: #8ecbd2;
 	--azul02: #1c97a5;
 	--azul03: #0e4c53;
+	--otroazul01:#3C3CB4;
 	--morado01: #d891c6;
 	--morado02: #b0228c;
 	--morado03: #581146;
@@ -3622,3 +3623,32 @@ input, select, textarea {
 			margin-top: 0;
 			padding-top: 0;
 		}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+	background-color:rgba(142,203,210,0.1);
+	cursor: pointer;
+	height:3em;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	text-transform: none;
+	font-size: 1.2em;
+	font-weight: bold;
+	padding-bottom:3.2em;
+}
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+	background-color:var(--azul02);
+	color:white;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+	background-color:rgba(142,203,210,0.1);
+	padding: 0 18px;
+	display: none;
+	overflow: hidden;
+}
